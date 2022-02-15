@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, HashRouter } from "react-router-dom";
 import Header from "./Header";
 import Body from "./Body";
 import Footer from "./Footer";
@@ -8,12 +8,12 @@ export default function App() {
   return (
     <div>
       <Header />
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Body />} />
           <Route path="character/:id" element={<Character />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <Footer />
     </div>
   );
